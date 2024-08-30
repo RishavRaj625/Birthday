@@ -26,10 +26,10 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const revealButton = document.getElementById('revealButton');
     const momentsSection = document.getElementById('momentsSection');
-    const speakButton = document.getElementById('speakButton');
-    const stopButton = document.getElementById('stopButton');
-    const shayariSection = document.getElementById('shayariSection');
-    const shayariText = document.querySelector('.shayari-text').innerText;
+    // const speakButton = document.getElementById('speakButton');
+    // const stopButton = document.getElementById('stopButton');
+    // const shayariSection = document.getElementById('shayariSection');
+    // const shayariText = document.querySelector('.shayari-text').innerText;
 
     let speechSynthesisUtterance = null;
 
@@ -39,24 +39,24 @@ document.addEventListener('DOMContentLoaded', function() {
         revealButton.style.display = 'none';
     });
 
-    speakButton.addEventListener('click', function() {
-        if (speechSynthesisUtterance) {
-            window.speechSynthesis.cancel();
-        }
-        shayariSection.classList.remove('hidden');
-        speechSynthesisUtterance = new SpeechSynthesisUtterance(shayariText);
-        speechSynthesisUtterance.lang = 'en-US'; // Set the language to English
-        window.speechSynthesis.speak(speechSynthesisUtterance);
-        stopButton.classList.remove('hidden');
-        speakButton.classList.add('hidden');
-    });
+    // speakButton.addEventListener('click', function() {
+    //     if (speechSynthesisUtterance) {
+    //         window.speechSynthesis.cancel();
+    //     }
+    //     shayariSection.classList.remove('hidden');
+    //     speechSynthesisUtterance = new SpeechSynthesisUtterance(shayariText);
+    //     speechSynthesisUtterance.lang = 'en-US'; // Set the language to English
+    //     window.speechSynthesis.speak(speechSynthesisUtterance);
+    //     stopButton.classList.remove('hidden');
+    //     speakButton.classList.add('hidden');
+    // });
 
-    stopButton.addEventListener('click', function() {
-        if (speechSynthesisUtterance) {
-            window.speechSynthesis.cancel();
-        }
-        shayariSection.classList.add('hidden');
-        stopButton.classList.add('hidden');
-        speakButton.classList.remove('hidden');
-    });
-});
+//     stopButton.addEventListener('click', function() {
+//         if (speechSynthesisUtterance) {
+//             window.speechSynthesis.cancel();
+//         }
+//         shayariSection.classList.add('hidden');
+//         stopButton.classList.add('hidden');
+//         speakButton.classList.remove('hidden');
+//     });
+// });
